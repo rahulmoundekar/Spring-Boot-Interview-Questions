@@ -107,3 +107,30 @@ Applications that use spring-boot-devtools will automatically restart whenever f
     </dependency>
 
 This can be achieved using DEV Tools. With this dependency any changes you save, the embedded tomcat will restart. Spring Boot has a Developer tools (DevTools) module which helps to improve the productivity of developers. One of the key challenge for the Java developers is to auto deploy the file changes to server and auto restart the server. Developers can reload changes on Spring Boot without having to restart my server. This will eliminates the need for manually deploying the changes every time. Spring Boot doesn’t have this feature when it has released it’s first version. This was a most requested features for the developers. The module DevTools does exactly what is needed for the developers. This module will be disabled in the production environment.
+
+### 12. How to run Spring boot application to custom port ?
+In application.properties, add following property.
+    
+    server.port = 8181
+
+### 13. What is the configuration file name used by Spring Boot?
+The configuration file used in spring boot projects is application.properties. This file is very important where we would over write all the default configurations. Normally we have to keep this file under the resources folder of the project.
+
+### 14. How to implement Spring web using Spring boot?
+Web Application Convenience 
+-   Boot automatically configures
+-   A DispatcherServlet & ContextLoaderListener
+-   Spring MVC using same defaults as @EnableWebMvc
+-   Plus many useful extra features:
+-   Static resources served from classpath
+-   /static, /public, /resources or /META-INF/resources
+-   Templates served from /templates
+-   If Velocity, Freemarker, Thymeleaf, or Groovy on classpath
+-   Provides default /error mapping
+-   Easily overridden
+-   Default MessageSource for I18N
+
+### 15. Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
+
+    spring boot application java property file name is application.properties
+    spring boot application YML file name is application.yml
