@@ -83,3 +83,7 @@ It is very common to use @EnableAutoConfiguration, @Configuration, and @Componen
               ...
       }
 
+### 10. What is a Spring Boot starter POM? Why is it useful?
+Starters are a set of convenient dependency descriptors that you can include in your application. The starters contain a lot of the dependencies that you need to get a project up and running quickly and with a consistent, supported set of managed transitive dependencies.
+
+The starter POMs are convenient dependency descriptors that can be added to your application’s Maven. In simple words, if you are developing a project that uses Spring Batch for batch processing, you just have to include spring-boot-starter-batch that will import all the required dependencies for the Spring Batch application. This reduces the burden of searching and configuring all the dependencies required for a framework.
