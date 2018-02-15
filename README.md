@@ -35,4 +35,51 @@ It follows “Opinionated Defaults Configuration” Approach to reduce Developer
 -  Spring Boot works with Maven, Gradle, Ant/Ivy
 -  Our content here will show Maven
 
+### 6. How are properties defined? Where?
+In spring boot, we have to define properties in the application.properties file exists in classpath of application as follow.
+
+Example: configure default DataSource bean
+database.host=localhost
+database.user=admin
+
+### 7. What is the difference between an embedded container and a WAR?
+There is no force to go container less
+-  Embedded container is just one feature of Spring Boot
+-  Traditional WAR also benefits a lot from Spring Boot
+-  Automatic Spring MVC setup, including DispatcherServlet
+-  Sensible defaults based on the classpath content
+-  Embedded container can be used during development
+
+### 8. What embedded containers does Spring Boot support?
+Spring Boot includes support for embedded Tomcat, Jetty, and Undertow servers.
+By default the embedded server will listen for HTTP requests on port 8080.
+
+### 9. What does @EnableAutoConfiguration do? What about @SpringBootApplication?
+@EnableAutoConfiguration annotation on a Spring Java configuration class
+– Causes Spring Boot to automatically create beans it thinks you need
+– Usually based on classpath contents, can easily override
+                    
+                    @Configuration
+                    @EnableAutoConfiguration
+                    public class MyAppConfig {
+                          public static void main(String[] args) {
+                          SpringApplication.run(MyAppConfig.class, args);
+                       }
+                    }
+                    
+@SpringBootApplication was available from Spring Boot 1.2
+It is very common to use @EnableAutoConfiguration, @Configuration, and @ComponentScan together.
+      
+      @Configuration
+      @ComponentScan
+      @EnableAutoConfiguration
+      public class MyAppConfig {
+              ...
+      }
+      
+      With @SpringBootApplication annotation
+      @SpringBootApplication
+      public class MyAppConfig {
+              ...
+      }
 
